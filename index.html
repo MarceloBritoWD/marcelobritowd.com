@@ -1,12 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
 	<meta charset="UTF-8">
+	<meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <link rel="icon" href="imagens/favicon-marcelobritowd.png" type="image/png" />
 	<title>Marcelo Brito - My Personal Homepage</title>
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-	<h1>Marcelo Brito website, testing commit</h1>
+	<section class="layer-principal">
+		<header class="animated flipInX">
+			<div class="left">
+				<img src="images/marcelo-avatar.jpg" alt="Marcelo Brito - My Personal Homepage" title="Marcelo Brito - My Personal Homepage">
+				<ul>
+					<li class="facebook"><a href="https://www.facebook.com/MarceloBritoWD" target="_blank"></a></li>
+					<li class="twitter"><a href="https://twitter.com/MarceloBritoWD" target="_blank"></a></li>
+					<li class="github"><a href="https://github.com/MarceloBritoWD" target="_blank"></a></li>
+				</ul>
+			</div>
+			<p>Oi, meu nome é Marcelo Brito, sou Desenvolvedor Front End. Criei esta homepage/blog com intuito de passar meu conhecimento à frente, dando dicas e conselhos sobre desenvolvimento web e sobre a vida também! :]</p>
+		</header>
 
-	
+		<button class="more"></button>
+		<button class="open-menu" onclick="abreMenu();"></button>
+		<nav class="menu" id="menu">
+			<ul>
+				<li><a href="">home</a></li>
+				<li><a href="">sobre</a></li>
+				<li><a href="">blog</a></li>
+				<li><a href="">contato</a></li>
+			</ul>		
+		</nav>
+	</section>
+
+
+
+	<section class="blog">
+		
+	</section>
+
+	<script>
+
+		function abreMenu() {
+			document.getElementById('menu').style.display = 'block';
+			return false;
+		}
+
+		function show() {
+			if (true) {};
+		}
+
+
+	</script>
+
+
+
+
+
 </body>
 </html>

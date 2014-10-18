@@ -1,1 +1,193 @@
-/*folha de estilo*/
+@charset "utf-8";
+
+* {
+	outline-color: invert;
+	outline-style: none;
+	outline-width: medium;
+	box-sizing: border-box;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: normal;
+	font-style: inherit;
+	font-size: inherit;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+
+body {
+	font-family: Georgia, sans-serif;
+	line-height: 1;
+	color: black;
+	background: #fff;
+	font-size: 100.01%;
+	margin: 0;
+}
+
+body, input, select, textarea {
+	font-size: inherit;
+	margin: 0;
+	border: none;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+table {
+	border-collapse: separate;
+	border-spacing: 0;
+}
+
+a, a:visited, button {
+	color: #fff;
+	text-decoration: none;
+	border: none;
+}
+
+/***** layer principal *****/
+.layer-principal {
+	width: 100%;
+	height: 100%;
+	background: url(../images/background.jpg) no-repeat;
+	background-size: cover;
+	position: absolute;
+	z-index: 1;
+
+}
+
+/* header */
+header {
+	width: 750px;
+	height: 287px;
+	position: relative;
+	top: 50%;
+	left: 50%;
+	margin-top: -200px;
+	margin-left: -375px;
+}
+
+
+
+header .left {
+	width: 250px;
+	height: 100%;
+	float: left;
+}
+
+header .left img {
+	width: 250px;
+	height: 250px;
+	float: left;
+	border-radius: 50%;
+	margin-bottom: 5px;
+}
+
+header .left ul {
+	width: auto;
+	height: 32px;
+	display: table;
+	margin: 0 auto;
+}
+
+header .left ul li {
+	display: inline;
+	width: 32px;
+	height: 32px;
+	float: left;
+	margin: 0 5px;
+}
+
+header .left ul .facebook {background: url(../images/social-icon-facebook.png) no-repeat;}
+header .left ul .twitter {background: url(../images/social-icon-twitter.png) no-repeat;}
+header .left ul .github {background: url(../images/social-icon-github.png) no-repeat;}
+
+header .left ul a {
+	width: 32px;
+	height: 32px;
+	float: left;
+}
+		
+header p {
+	width: 470px;
+	font-size: 25px;
+	line-height: 30px;
+	color: #fff;
+	text-align: left;
+	margin-top: 40px;
+	margin-left: 20px;
+	float: left;	
+}
+
+/* more-buttom */
+.more {
+	width: 86px;
+	height: 86px;
+	position: absolute;
+	bottom: 30px;
+	left: 50%;
+	margin-left: -43px;
+	background: url(../images/buttom-icon-more.png) no-repeat center;
+	cursor: pointer;
+}
+
+.open-menu {
+	width: 54px;
+	height: 38px;
+	position: absolute;
+	z-index: 2;
+	top: 30px;
+	right: 30px;
+	background: url(../images/buttom-menu-icon.png) no-repeat center;
+	cursor: pointer;
+}
+
+.menu {
+	display: none;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,110,222,.9); /* aqui será um gradient color */
+	position: absolute;
+	z-index: 9999;
+}
+
+.menu ul {
+	width: 500px;
+	height: auto;
+	position: relative;
+	left: 50%;
+	top: 50%;
+	margin-left: -250px;
+}
+
+.menu ul li {
+	display: block;
+	margin: 40px 0;
+	text-align: center;
+}
+
+.menu ul li a {
+	font-size: 35px;
+	color: #fff;
+}
+
+/***** blog *****/
+.blog {
+	width: 100%;
+	height: 100%;
+	background: #111;
+	position: relative;
+	display: block;
+}
+
+
+
+
+
+
+
+
