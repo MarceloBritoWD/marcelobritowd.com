@@ -10,10 +10,15 @@
   <link rel="icon" href="imagens/favicon-marcelobritowd.png" type="image/png" />
 	<title>Marcelo Brito - My Personal Homepage</title>
 	<link rel="stylesheet" href="css/style.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 </head>
 <body>
+	<div class="loading">
+		<img src="images/loading2.gif" alt="">
+	</div>
+
 	<section class="layer-principal">
-		<header class="animated flipInX">
+		<header class="header-principal animated flipInX">
 			<div class="left">
 				<img src="images/marcelo-avatar.jpg" alt="Marcelo Brito - My Personal Homepage" title="Marcelo Brito - My Personal Homepage">
 				<ul>
@@ -37,29 +42,108 @@
 		</nav>
 	</section>
 
-
-
 	<section class="blog">
-		
-	</section>
+		<header class="header-blog">
+			<div class="perfil-box">
+				<a href=""><img src="" alt=""></a>
+			</div>
+		</header>
+
+		<main class="postagens">
+			<article class="post">
+				<header class="post-header">
+					<span class="post-data">19 Nov 2014</span>
+					<h2 class="post-titulo">Aprendendo MongoDb a partir do Relacional</h2>
+				</header>
+
+				<section class="post-trecho">
+					<p>Há uma coisa bem diferente no MongoDB para quem vem do relacional são seus operadores. Eles são responsáveis por fazer alguma ação que no SQL é escrito, no MongoDB será um operador, por exemplo: $set: modifica valores e cria campos { $set: {campo: valor} } No MongoDb possuimos diversos…</p>
+				</section>
+			</article>
+
+
+			<article class="post">
+				<header class="post-header">
+					<span class="post-data"><time datetime="2014-10-02">19 Nov 2014</time></span>
+					<h2 class="post-titulo">The Title is not a big thing, but the javascrippt is!!</h2>
+				</header>
+
+				<section class="post-trecho">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, eius quis illo doloribus doloremque vero? Non similique nostrum voluptatem ducimus itaque illum doloremque, autem quam sed odio reprehenderit, necessitatibus eos.</p>
+				</section>
+			</article>
+
+
+			<article class="post">
+				<header class="post-header">
+					<span class="post-data"><time datetime="2014-10-02">19 Nov 2014</time></span>
+					<h2 class="post-titulo" >The Title is not a big thing, but the javascrippt is!!</h2>
+				</header>
+
+				<section class="post-trecho">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, eius quis illo doloribus doloremque vero? Non similique nostrum voluptatem ducimus itaque illum doloremque, autem quam sed odio reprehenderit, necessitatibus eos.</p>
+				</section>
+			</article>
+
+
+			<article class="post">
+				<header class="post-header">
+					<span class="post-data">19 Nov 2014</span>
+					<h2 class="post-titulo">Aprendendo MongoDb a partir do Relacional</h2>
+				</header>
+
+				<section class="post-trecho">
+					<p>Há uma coisa bem diferente no MongoDB para quem vem do relacional são seus operadores. Eles são responsáveis por fazer alguma ação que no SQL é escrito, no MongoDB será um operador, por exemplo: $set: modifica valores e cria campos { $set: {campo: valor} } No MongoDb possuimos diversos…</p>
+				</section>
+			</article>
+
+			<article class="post">
+				<header class="post-header">
+					<span class="post-data">19 Nov 2014</span>
+					<h2 class="post-titulo">Aprendendo MongoDb a partir do Relacional</h2>
+				</header>
+
+				<section class="post-trecho">
+					<p>Há uma coisa bem diferente no MongoDB para quem vem do relacional são seus operadores. Eles são responsáveis por fazer alguma ação que no SQL é escrito, no MongoDB será um operador, por exemplo: $set: modifica valores e cria campos { $set: {campo: valor} } No MongoDb possuimos diversos…</p>
+				</section>
+			</article>
+
+			<article class="post">
+				<header class="post-header">
+					<span class="post-data">19 Nov 2014</span>
+					<h2 class="post-titulo">Aprendendo MongoDb a partir do Relacional</h2>
+				</header>
+
+				<section class="post-trecho">
+					<p>Há uma coisa bem diferente no MongoDB para quem vem do relacional são seus operadores. Eles são responsáveis por fazer alguma ação que no SQL é escrito, no MongoDB será um operador, por exemplo: $set: modifica valores e cria campos { $set: {campo: valor} } No MongoDb possuimos diversos…</p>
+				</section>
+			</article>
+
+			
+		</main>
+	</section><!-- /blog -->
+
+
+	<footer>
+		<small>Make with <3 by <a href="http://twitter.com/marcelobritowd" target="_blank">Marcelo Brito</a></small>
+	</footer>
 
 	<script>
-
 		function abreMenu() {
 			document.getElementById('menu').style.display = 'block';
 			return false;
 		}
-
-		function show() {
-			if (true) {};
-		}
-
-
 	</script>
 
 
-
-
-
+	<script>
+    jQuery(document).ready(function($){
+      $('.more').click(function(){
+          $("html, body").animate({
+          	scrollTop: $(".blog").offset().top
+          }, 1000);
+      });
+    });
+  </script>
 </body>
 </html>

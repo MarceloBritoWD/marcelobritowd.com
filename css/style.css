@@ -49,19 +49,68 @@ a, a:visited, button {
 	border: none;
 }
 
+html, body {
+	height: 100%;
+	/*overflow-y: hidden;*/
+}
+/***** loading page *****/
+.loading {
+	width: 100%;
+	height: 100%;	
+	background: #fff no-repeat center;
+	position: absolute;
+	z-index: 999;
+	-webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeOut;
+}
+
+.loading img {
+	width: 40px;
+	height: 40px;
+	position: relative;
+	top: 50%;
+	left: 50%;
+	margin-top: -20px;
+	margin-left: -20px;
+}
+
+@-webkit-keyframes fadeOut {
+  80% {
+  	opacity: 1;
+	}
+
+	100% {
+	  opacity: 0;
+	  z-index: 0;
+	  display: none;
+	}
+}
+
+@keyframes fadeOut {
+  80% {
+  	opacity: 1;
+	}
+	100% {
+    opacity: 0;
+    z-index: 0;
+    display: none;
+	}
+}
+
 /***** layer principal *****/
 .layer-principal {
 	width: 100%;
-	height: 100%;
+	height: 100%;	
 	background: url(../images/background.jpg) no-repeat;
 	background-size: cover;
-	position: absolute;
-	z-index: 1;
-
 }
 
 /* header */
-header {
+.header-principal {
 	width: 750px;
 	height: 287px;
 	position: relative;
@@ -69,17 +118,16 @@ header {
 	left: 50%;
 	margin-top: -200px;
 	margin-left: -375px;
+	float: left;
 }
 
-
-
-header .left {
+.header-principal .left {
 	width: 250px;
 	height: 100%;
 	float: left;
 }
 
-header .left img {
+.header-principal .left img {
 	width: 250px;
 	height: 250px;
 	float: left;
@@ -87,14 +135,14 @@ header .left img {
 	margin-bottom: 5px;
 }
 
-header .left ul {
+.header-principal .left ul {
 	width: auto;
 	height: 32px;
 	display: table;
 	margin: 0 auto;
 }
 
-header .left ul li {
+.header-principal .left ul li {
 	display: inline;
 	width: 32px;
 	height: 32px;
@@ -102,17 +150,17 @@ header .left ul li {
 	margin: 0 5px;
 }
 
-header .left ul .facebook {background: url(../images/social-icon-facebook.png) no-repeat;}
-header .left ul .twitter {background: url(../images/social-icon-twitter.png) no-repeat;}
-header .left ul .github {background: url(../images/social-icon-github.png) no-repeat;}
+.header-principal .left ul .facebook {background: url(../images/social-icon-facebook.png) no-repeat;}
+.header-principal .left ul .twitter {background: url(../images/social-icon-twitter.png) no-repeat;}
+.header-principal .left ul .github {background: url(../images/social-icon-github.png) no-repeat;}
 
-header .left ul a {
+.header-principal .left ul a {
 	width: 32px;
 	height: 32px;
 	float: left;
 }
 		
-header p {
+.header-principal p {
 	width: 470px;
 	font-size: 25px;
 	line-height: 30px;
@@ -136,9 +184,9 @@ header p {
 }
 
 .open-menu {
-	width: 54px;
-	height: 38px;
-	position: absolute;
+	width: 36px;
+	height: 25px;
+	position: fixed;
 	z-index: 2;
 	top: 30px;
 	right: 30px;
@@ -156,15 +204,17 @@ header p {
 }
 
 .menu ul {
-	width: 500px;
-	height: auto;
+	width: 150px;
+	height: 260px;
 	position: relative;
 	left: 50%;
 	top: 50%;
-	margin-left: -250px;
+	margin-top: -160px;
+	margin-left: -75px;
 }
 
 .menu ul li {
+	width: 200px;
 	display: block;
 	margin: 40px 0;
 	text-align: center;
@@ -173,21 +223,102 @@ header p {
 .menu ul li a {
 	font-size: 35px;
 	color: #fff;
+	padding: 10px 0;
 }
+
+
+
 
 /***** blog *****/
 .blog {
 	width: 100%;
-	height: 100%;
-	background: #111;
+	height: auto;
+	min-height: 1200px;
+	background: #fff;
 	position: relative;
+	z-index: 3;
 	display: block;
+	float: left;
+}
+
+.blog .header-blog {
+	width: 100%;
+	height: 80px;
+	background: rgba(255,255,255,.5);
+	box-shadow: 0 0 3px rgba(0,0,0,.5);
+	display: none;
+}
+
+.postagens {
+	width: 800px;
+	margin: 0 auto;
+}
+
+.postagens .post {
+	width: 100%;
+	height: auto;
+	max-height: 300px;
+	background: #;
+	margin-bottom: 80px;
+}
+
+.postagens .post:first-child {
+	margin-top: 80px;
+}
+
+.postagens .post:last-child {
+	margin-top: 0px;
+}
+
+.post-header {
+	margin-bottom: 20px;
+}
+
+.post-header .post-data {
+	width: 100%;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 15px;
+	color: #ccc;
+	text-align: right;
+	text-transform: uppercase;
+	margin-bottom: 20px;
+	display: table;
+}
+
+.post-header .post-titulo {
+	font-family: sans-serif;
+	font-size: 45px;
+	color: #111;
+	font-weight: bold;
+	letter-spacing: -1px;
+}
+
+.post-trecho {}
+
+.post-trecho p {
+	font-size: 20px;
+	line-height: 22px;
+	color: #666;
+	text-align: justify;
 }
 
 
+footer {
+	width: 100%;
+	height: 120px;
+	text-align: center;
+	background: #f1f1f8;
+	display: table;
+}
 
+footer small {
+	font-size: 12px;
+	color: #999;
+	display: table;
+	margin: 50px auto 0 auto;
+}
 
+footer small a {
 
-
-
-
+	color: #111 !important;
+}
