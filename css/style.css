@@ -105,7 +105,7 @@ html, body {
 .layer-principal {
 	width: 100%;
 	height: 100%;	
-	background: url(../images/praia-de-intermares.jpg) no-repeat;
+	background: url(../images/praia-de-intermares.jpg) no-repeat fixed;
 	background-size: cover;
 }
 
@@ -284,11 +284,12 @@ html, body {
 }
 
 .postagens .post:first-child {
-	margin-top: 80px;
+	margin-top: 20px;
 }
 
 .postagens .post:last-child {
 	margin-top: 0px;
+	border-bottom: none;
 }
 
 .post-header {
@@ -308,7 +309,7 @@ html, body {
 
 .post-header .post-titulo {
 	font-family: sans-serif;
-	font-size: 45px;
+	font-size: 40px;
 	color: #111;
 	font-weight: bold;
 	letter-spacing: -1px;
