@@ -105,7 +105,7 @@ html, body {
 .layer-principal {
 	width: 100%;
 	height: 100%;	
-	background: url(../images/background.jpg) no-repeat;
+	background: url(../images/praia-de-intermares.jpg) no-repeat;
 	background-size: cover;
 }
 
@@ -171,16 +171,35 @@ html, body {
 	float: left;	
 }
 
-/* more-buttom */
-.more {
-	width: 86px;
-	height: 86px;
+/* roll-button */
+.roll {
+	width: 78px;
+	height: 78px;
 	position: absolute;
 	bottom: 30px;
 	left: 50%;
-	margin-left: -43px;
-	background: url(../images/buttom-icon-more.png) no-repeat center;
+	margin-left: -39px;
+	background: url(../images/button-icon-roll.png) no-repeat center;
 	cursor: pointer;
+  -webkit-animation: roll-page .5s ease alternate infinite; /* Safari 4+ */
+     -moz-animation: roll-page .5s ease alternate infinite; /* Fx 5+ */
+     -o-animation:   roll-page .5s ease alternate infinite; /* Opera 12+ */
+          animation: roll-page .5s ease alternate infinite; 
+}
+
+@keyframes roll-page {
+	from {bottom: 30px;}
+	to {bottom: 10px;}
+}
+
+@-webkit-keyframes roll-page {
+	from {bottom: 30px;}
+	to {bottom: 10px;}
+}
+
+@-moz-keyframes roll-page  {
+	from {bottom: 30px;}
+	to {bottom: 10px;}
 }
 
 .open-menu {
@@ -190,7 +209,7 @@ html, body {
 	z-index: 2;
 	top: 30px;
 	right: 30px;
-	background: url(../images/buttom-menu-icon.png) no-repeat center;
+	background: url(../images/button-menu-icon.png) no-repeat center;
 	cursor: pointer;
 }
 
@@ -259,7 +278,9 @@ html, body {
 	height: auto;
 	max-height: 300px;
 	background: #;
-	margin-bottom: 80px;
+	margin-bottom: 20px;
+	border-bottom: 1px dotted #ccc;
+	padding-bottom: 60px; 
 }
 
 .postagens .post:first-child {
