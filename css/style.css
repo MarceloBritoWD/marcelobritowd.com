@@ -148,6 +148,7 @@ html, body {
 	height: 32px;
 	float: left;
 	margin: 0 5px;
+	border-radius: 50%;
 }
 
 .header-principal .left ul .facebook {background: url(../images/social-icon-facebook.png) no-repeat;}
@@ -165,6 +166,7 @@ html, body {
 	font-size: 25px;
 	line-height: 30px;
 	color: #fff;
+	text-shadow: 0 0 3px #111;
 	text-align: left;
 	margin-top: 40px;
 	margin-left: 20px;
