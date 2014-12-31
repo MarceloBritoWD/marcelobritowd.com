@@ -3,40 +3,30 @@ module.exports = function (grunt) {
 
 	grunt.initConfig ({
 
+		watch: {
+		  css: {
+		    files: 'src/css/*.css',
+		    tasks: ['cssmin'],
+		    options: {
+		      livereload: true,
+		    },
+		  },
+		},
+
 		cssmin: {
 		  minify: {
 		    expand: true,
-		    cwd: 'css/',
-		    src: ['style.css'],
+		    cwd: 'src/css/',
+		    src: ['*.css'],
 		    dest: 'css/',
 		    ext: '.min.css'
 		  }
 		}
 
 
-		'string-replace': {
-		  inline: {
-		    files: {
-		      'css/': 'css/**',
-		    },
-		    options: {
-		      replacements: [
-		        // place files inline example
-		        {
-		          pattern: '<link rel="stylesheet" href="css/style.css">',
-		          replacement: '<link rel="stylesheet" <%= grunt.file.read('css/style.min.css') %>'
-		        }
-		      ]
-		    }
-		  }
-		}
-
-
-
 	});
 
-	grunt.loadNpmTasks('grunt-contrib-cssmin', 'grunt-string-replace');
-	grunt.registerTask('default', ['cssmin', 'string-replace']);
-
-
+	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-contrib-cssmin');
+	grunt.registerTask('default', ['watch', 'cssmin']);
 };
