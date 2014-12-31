@@ -1,0 +1,146 @@
+@charset "utf-8";
+
+* {
+	outline-color: invert;
+	outline-style: none;
+	outline-width: medium;
+	box-sizing: border-box;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: normal;
+	font-style: inherit;
+	font-size: inherit;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+
+body {
+	font-family: monospace, sans-serif;
+	line-height: 1;
+	color: black;
+	font-size: 100.01%;
+	margin: 0;
+	background: url(../images/background-page.jpg) no-repeat center;
+	-webkit-background-size: cover; 
+		 -moz-background-size: cover; 
+			 -o-background-size: cover; 
+			-ms-background-size: cover; 
+					background-size: cover;
+}
+
+body, input, select, textarea {
+	font-size: inherit;
+	margin: 0;
+	border: none;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+table {
+	border-collapse: separate;
+	border-spacing: 0;
+}
+
+a, a:visited, button {
+	color: #fff;
+	text-decoration: none;
+	border: none;
+}
+
+html, body {
+	height: 100%;
+	/*overflow-y: hidden;*/
+}
+
+#bg {	
+	width: 100%;
+	height: 100%;
+	position: relative;
+	z-index: 1;
+	opacity: .89;
+}
+
+header {
+	width: 800px;
+	height: auto;
+	position: absolute;
+	z-index: 3;
+	top: 7%;
+	left: 50%;
+	margin-left: -400px;
+}
+
+.perfil {
+	width: auto;
+	text-align: center;
+}
+.perfil a {
+	display: table;
+	margin: 0 auto;
+}
+.perfil a .title {
+	font-size: 50px;
+	margin: 10px 0 15px 0;
+}
+.perfil a .user-name {}
+.perfil a img {
+	-webkit-border-radius: 50%;
+		 -moz-border-radius: 50%;
+			 -o-border-radius: 50%;
+			-ms-border-radius: 50%;
+					border-radius: 50%;
+}
+
+.perfil p {
+	font-size: 13px;
+	line-height: 18px;
+	color: #fff;
+	margin-top: 30px;
+}
+
+.social {
+	width: auto;
+	height: 32px;
+	margin: 20px auto 0 auto;
+	display: table;
+}
+
+.social li {
+	width: 32px;
+	height: 32px;
+	display: inline;
+	float: left;
+	margin-right: 10px;
+	-webkit-border-radius: 50%;
+		 -moz-border-radius: 50%;
+			 -o-border-radius: 50%;
+			-ms-border-radius: 50%;
+					border-radius: 50%;
+}
+
+.social li:hover {
+	opacity: .5;
+}
+
+.social li:last-child {
+	margin-right: 0;
+}
+
+.social .github {background: url(../images/social-icon-github.png) no-repeat center;}
+.social .twitter {background: url(../images/social-icon-twitter.png) no-repeat center;}
+.social .facebook {background: url(../images/social-icon-facebook.png) no-repeat center;}
+
+
+.social li a {
+	width: 32px;
+	height: 32px;
+	float: left;
+}
+
