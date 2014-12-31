@@ -10,7 +10,7 @@
   <link rel="icon" href="imagens/favicon-marcelobritowd.png" type="image/png" />
 	<title>Marcelo Brito - My Personal Homepage</title>
 	<link rel="stylesheet" href="css/style.css">
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 </head>
 <body>
 	<div class="loading">
@@ -31,13 +31,13 @@
 		</header>
 
 		<button class="roll"></button>
-		<button class="open-menu" onclick="abreMenu();"></button>
+		<button class="open-menu" id="open-menu" onclick="abreMenu();"></button>
 		<nav class="menu" id="menu">
 			<ul>
 				<li><a href="">home</a></li>
-				<li><a href="">sobre</a></li>
+				<li><a href="">about</a></li>
 				<li><a href="">blog</a></li>
-				<li><a href="">contato</a></li>
+				<li><a href="">contact</a></li>
 			</ul>		
 		</nav>
 	</section>
@@ -129,8 +129,13 @@
 	</footer>
 
 	<script>
+
+		var closedMenu = document.getElementById('menu').style.display = 'none';
+
 		function abreMenu() {
-			document.getElementById('menu').style.display = 'block';
+			if (closedMenu) {
+				document.getElementById('menu').style.display = 'block';
+			}
 			return false;
 		}
 	</script>
@@ -141,7 +146,7 @@
       $('.roll').click(function(){
           $("html, body").animate({
           	scrollTop: $(".blog").offset().top
-          }, 1000);
+          }, 500);
       });
     });
   </script>
