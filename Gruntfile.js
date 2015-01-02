@@ -14,12 +14,18 @@ module.exports = function (grunt) {
 		},
 
 		cssmin: {
-		  minify: {
-		    expand: true,
-		    cwd: 'src/css/',
-		    src: ['*.css'],
-		    dest: 'css/',
-		    ext: '.min.css'
+		  // minify: {
+		  //   expand: true,
+		  //   cwd: 'src/css/',
+		  //   src: ['*.css'],
+		  //   dest: 'css/',
+		  //   ext: '.min.css'
+		  // }
+
+		  target: {
+		    files: {
+		      'css/style.min.css': ['src/css/style.css', 'src/css/animations.css', 'src/css/media-queries.css']
+		    }
 		  }
 		}
 

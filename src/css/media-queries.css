@@ -1,0 +1,28 @@
+/* Media queries responsive */
+@media screen and (max-width: 799px) {
+	header {
+		width: 90%;
+		margin-left: -45%;
+		margin-top: 0px;
+		top: 10%;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	html, body {
+		height: none;
+	}
+
+	#geral {	
+		width: 100%;
+		position: absolute;
+		z-index: 1;
+		opacity: .9;
+		display: table;
+		background: none !important;
+	}
+
+	.perfil .pic-name img {
+		margin: 0 0 0 -10px;
+	}
+}

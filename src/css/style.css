@@ -1,5 +1,7 @@
 @charset "utf-8";
 
+@import url(http://fonts.googleapis.com/css?family=Oxygen+Mono);
+
 * {
 	outline-color: invert;
 	outline-style: none;
@@ -23,7 +25,8 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 }
 
 body {
-	font-family: monospace, sans-serif;
+	/*font-family: Monospace, sans-serif;*/
+	font-family: 'Oxygen Mono', sans-serif;
 	line-height: 1;
 	color: black;
 	font-size: 100.01%;
@@ -56,8 +59,8 @@ html, body {
 }
 
 
-/* */
-#bg {	
+/* background */
+#geral {	
 	width: 100%;
 	height: 100%;
 	position: absolute;
@@ -76,21 +79,16 @@ header {
 	margin-left: -400px;
 }
 
+/* perfil */
 .perfil {
 	width: auto;
 	text-align: center;
 }
-.perfil .pic-name {
+.pic-name {
 	display: table;
 	margin: 0 auto;
 }
-.perfil .pic-name .title {
-	font-size: 50px;
-	margin: 10px 0 15px 0;
-}
-.perfil .pic-name .user-name {}
-
-.perfil .pic-name img {
+.pic-name img {
 	width: 280px;
 	height: 280px;
 	border: 10px solid rgba(255,255,255,.6);
@@ -99,6 +97,27 @@ header {
 			 -o-border-radius: 50%;
 			-ms-border-radius: 50%;
 					border-radius: 50%;
+	-webkit-animation: rotateIn 1s ease;
+  	 -moz-animation: rotateIn 1s ease;
+			 -o-animation: rotateIn 1s ease;
+  				animation: rotateIn 1s ease;
+}
+
+.pic-name .title {
+	font-size: 50px;
+	margin: 10px 0 15px 0;
+	-webkit-animation: fadeInUp 1.5s ease;
+  	 -moz-animation: fadeInUp 1.5s ease;
+			 -o-animation: fadeInUp 1.5s ease;
+  				animation: fadeInUp 1.5s ease;
+}
+
+.pic-name .user-name {
+	font-size: 15px;
+	-webkit-animation: fadeInDown 1.5s ease;
+  	 -moz-animation: fadeInDown 1.5s ease;
+			 -o-animation: fadeInDown 1.5s ease;
+  				animation: fadeInDown 1.5s ease;
 }
 
 .perfil p {
@@ -106,6 +125,10 @@ header {
 	line-height: 18px;
 	color: #fff;
 	margin-top: 30px;
+	-webkit-animation: fadeInUpTwo 2s ease;
+  	 -moz-animation: fadeInUpTwo 2s ease;
+			 -o-animation: fadeInUpTwo 2s ease;
+  				animation: fadeInUpTwo 2s ease;
 }
 
 .perfil p a {
@@ -116,7 +139,6 @@ header {
 .perfil p a:hover {
 	opacity: .7;
 }
-
 
 /* social */
 .social {
@@ -152,42 +174,30 @@ header {
 	margin-right: 0;
 }
 
-.social .github {background: url(../images/social-icon-github.png) no-repeat center;}
-.social .twitter {background: url(../images/social-icon-twitter.png) no-repeat center;}
-.social .facebook {background: url(../images/social-icon-facebook.png) no-repeat center;}
-
+.social .github {
+	-webkit-animation: fadeIn 2.5s ease;
+  	 -moz-animation: fadeIn 2.5s ease;
+			 -o-animation: fadeIn 2.5s ease;
+  				animation: fadeIn 2.5s ease;
+	background: url(../images/social-icon-github.png) no-repeat center;
+}
+.social .twitter {
+	-webkit-animation: fadeIn 3s ease;
+  	 -moz-animation: fadeIn 3s ease;
+			 -o-animation: fadeIn 3s ease;
+  				animation: fadeIn 3s ease;
+	background: url(../images/social-icon-twitter.png) no-repeat center;
+}
+.social .facebook {
+	-webkit-animation: fadeIn 3.5s ease;
+  	 -moz-animation: fadeIn 3.5s ease;
+			 -o-animation: fadeIn 3.5s ease;
+  				animation: fadeIn 3.5s ease;
+	background: url(../images/social-icon-facebook.png) no-repeat center;
+}
 
 .social li a {
 	width: 32px;
 	height: 32px;
 	float: left;
-}
-
-@media screen and (max-width: 799px) {
-	header {
-		width: 90%;
-		margin-left: -45%;
-		margin-top: 0px;
-		top: 10%;
-	}
-}
-
-@media screen and (max-width: 480px) {
-	html, body {
-		height: auto;
-	}
-
-
-	#bg {	
-		width: 100%;
-		height: auto;
-		position: absolute;
-		z-index: 1;
-		opacity: .9;
-		background: none;
-	}
-
-	.perfil .pic-name img {
-		margin: 20px 0 0 -10px;
-	}
 }
