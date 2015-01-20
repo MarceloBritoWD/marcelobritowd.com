@@ -8,7 +8,7 @@ module.exports = function (grunt) {
 		    files: 'src/css/*.css',
 		    tasks: ['cssmin'],
 		    options: {
-		      livereload: true,
+		      livereload: false,
 		    },
 		  },
 		},
