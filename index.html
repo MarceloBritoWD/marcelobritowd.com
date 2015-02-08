@@ -34,21 +34,26 @@
 </header>
 </div>
 <script>
-	// random color	
-	var color = Math.random();
+	// // random color	
+	// var color = Math.random();
 
-	if (color < 0.25) {
-		document.getElementById("geral").style.background = "#4682b4"
-	} 
-	else if (color <= 0.50) {
-		document.getElementById("geral").style.background = "#b22222"
-	}
-	else if (color <= 0.75) {
-		document.getElementById("geral").style.background = "#503583"
-	}
-	else {
-		document.getElementById("geral").style.background = "#000000"
-	}
+	// if (color < 0.25) {
+	// 	document.getElementById("geral").style.background = "#4682b4"
+	// } 
+	// else if (color <= 0.50) {
+	// 	document.getElementById("geral").style.background = "#b22222"
+	// }
+	// else if (color <= 0.75) {
+	// 	document.getElementById("geral").style.background = "#503583"
+	// }
+	// else {
+	// 	document.getElementById("geral").style.background = "#000000"
+	// }
+
+
+	var color = ['#4682b4', '#b22222', '#503583', '#000000'];
+	var rand = color[Math.floor(Math.random() * color.length)];
+	document.getElementById("geral").style.background = rand;
 
 	// analytics
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
