@@ -4,7 +4,7 @@
 		width: 90%;
 		margin-left: -45%;
 		margin-top: 0px;
-		top: 10%;
+		top: 5%;
 	}
 }
 
@@ -13,7 +13,12 @@
 		height: none;
 	}
 
-	#geral {	
+	body {
+		background-image: none;
+		background-color: #b22222;
+	}
+
+	#geral {
 		width: 100%;
 		position: absolute;
 		z-index: 1;
