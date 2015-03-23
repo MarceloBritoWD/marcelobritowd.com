@@ -1,0 +1,12 @@
+body {
+  font-family: 'Oxigen Mono', sans-serif;
+  background: #121212;
+}
+h1 {
+  color: #000212;
+  font-size: 12em;
+  background: #222;
+}
+main {
+  height: 140px;
+}

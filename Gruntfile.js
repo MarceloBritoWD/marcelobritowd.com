@@ -4,35 +4,27 @@ module.exports = function (grunt) {
 	grunt.initConfig ({
 
 		watch: {
-		  css: {
-		    files: 'src/css/*.css',
-		    tasks: ['cssmin'],
-		    options: {
-		      livereload: false,
-		    },
-		  },
+		  src: {
+	      files: ['src/styl/*.styl'],
+	      tasks: ['stylus'],
+	    },
 		},
 
-		cssmin: {
-		  // minify: {
-		  //   expand: true,
-		  //   cwd: 'src/css/',
-		  //   src: ['*.css'],
-		  //   dest: 'css/',
-		  //   ext: '.min.css'
-		  // }
-
-		  target: {
+		// configurar daqui pra baixo
+		stylus: {
+			options: {
+				compress: false
+			},
+		  compile: {
 		    files: {
-		      'css/style.min.css': ['src/css/style.css', 'src/css/animations.css', 'src/css/media-queries.css']
-		    }
-		  }
+		      'css/style.css': ['src/styl/main.styl'] // compile and concat into single file
+		    },
+		  },
 		}
-
 
 	});
 
 	grunt.loadNpmTasks('grunt-contrib-watch');
-	grunt.loadNpmTasks('grunt-contrib-cssmin');
-	grunt.registerTask('default', ['watch', 'cssmin']);
+	grunt.loadNpmTasks('grunt-contrib-stylus');
+	grunt.registerTask('default', ['watch', 'stylus']);
 };
