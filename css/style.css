@@ -1,12 +1,173 @@
+@import url("http://fonts.googleapis.com/css?family=Oxygen+Mono");
+* {
+  outline-color: invert;
+  outline-style: none;
+  outline-width: medium;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+input,
+select,
+textarea,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: 0;
+  font-weight: normal;
+  font-style: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  vertical-align: baseline;
+}
 body {
   font-family: 'Oxigen Mono', sans-serif;
-  background: #121212;
+  background: #000;
+  color: #fff;
 }
-h1 {
-  color: #000212;
-  font-size: 12em;
-  background: #222;
+ol,
+ul {
+  list-style: none;
 }
-main {
-  height: 140px;
+a,
+a:visited,
+button {
+  color: #fff;
+  text-decoration: none;
+  border: none;
+}
+html,
+body {
+  height: 100%;
+}
+#geral {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  opacity: 0.9;
+}
+header {
+  width: 800px;
+  height: auto;
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  left: 50%;
+  margin-top: -283.5px;
+  margin-left: -400px;
+}
+.perfil {
+  width: auto;
+  text-align: center;
+}
+.pic-name {
+  display: table;
+  margin: 0 auto;
+}
+.pic-name img {
+  width: 280px;
+  height: 280px;
+  border: 10px solid rgba(255,255,255,0.6);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+}
+.pic-name .title {
+  font-size: 50px;
+  margin: 10px 0 15px 0;
+}
+.pic-name .user-name {
+  font-size: 15px;
+}
+.pic-name p {
+  font-size: 13px;
+  line-height: 18px;
+  margin-top: 30px;
+}
+.pic-name a {
+  border-bottom: 1px solid #fff;
+  padding-bottom: 1px;
+}
+.pic-name a:hover {
+  opacity: 0.7;
+}
+.social {
+  width: auto;
+  height: 32px;
+  margin: 20px auto;
+  display: table;
+}
+.social li {
+  height: 32px;
+}
+.social li:hover {
+  opacity: 0.4;
+}
+.social li:last-child {
+  margin-right: 0;
+}
+.social a {
+  width: 32px;
+  height: 32px;
 }
