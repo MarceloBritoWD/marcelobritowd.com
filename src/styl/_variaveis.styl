@@ -1,29 +1,45 @@
+@import	url("http://fonts.googleapis.com/css?family=Oxygen+Mono")
+
 // variaveis
 corPrincipal = #000
 corTextos = #fff
 
 
 // mixins
-border-radius(radius)
-	-webkit-border-radius radius
-	-moz-border-radius radius
-	-ms-border-radius radius
-	border-radius radius
+border-radius()
+	-webkit-border-radius arguments
+	-moz-border-radius arguments
+	-ms-border-radius arguments
+	-o-border-radius arguments
+	border-radius arguments
 
-box-sizing(border)
-	-webkit-box-sizing border
-	-moz-box-sizing border
-	-o-box-sizing border
-	box-sizing border
+box-sizing()
+	-webkit-box-sizing arguments
+	-moz-box-sizing arguments
+	-ms-box-sizing arguments
+	-o-box-sizing arguments
+	box-sizing arguments
+
+background-size()
+	-webkit-background-size arguments
+	-moz-background-size arguments
+	-ms-background-size arguments
+	-o-background-size arguments
+	background-size arguments
+
+animation()
+	-webkit-animation arguments
+	-moz-animation arguments
+	-ms-animation arguments
+	-o-animation arguments
+	animation arguments
 	
-// animation(a b c)
-// 	-webkit-animation 
-//   -moz-animation 
-// 	-o-animation 
-//   animation 
-
-
-@import url('http://fonts.googleapis.com/css?family=Oxygen+Mono')
+tranform()
+	-webkit-transform arguments
+	-moz-transform arguments
+	-ms-transform arguments
+	-o-transform arguments
+	transform arguments
 
 
 // reset
@@ -49,7 +65,8 @@ body
 	font-family 'Oxigen Mono', sans-serif
 	background corPrincipal
 	color corTextos
-	
+	font-size 100.1%	
+	background-size(cover)
 
 ol, ul
 	list-style none
@@ -99,24 +116,24 @@ header
 		height 280px
 		border 10px solid rgba(255,255,255,.6)
 		border-radius(50%)
-		// animation(ratateIn 1s ease)
+		animation(rotateIn 1s ease)
 		
 
 	.title
 		font-size 50px
 		margin 10px 0 15px 0
-		// animation(fadeInUp 1.5s ease)
+		animation(fadeInUp 1.5s ease)
 	
 
 	.user-name
 		font-size 15px
-		// animation(fadeInDown 1.5s ease)
+		animation(fadeInDown 1.5s ease)
 			
 	p
 		font-size 13px
 		line-height 18px
 		margin-top 30px
-		// animation(fadeInUpTwo 2s ease)
+		animation(fadeInUpTwo 2s ease)
 	
 	a
 		border-bottom 1px solid corTextos
@@ -136,17 +153,241 @@ header
 	display table
 	
 	li
+		width dimensionIcons
 		height dimensionIcons
+		display inline
+		float left
 		
 		&:hover
 			opacity .4
 			
 		&:last-child
 			margin-right 0
-			
-	// github
-	// deve haver algum jeito de deixar o que vai entrar aqui melhor
-			
+				
+	// tem que ver eses bgs
+	.github
+		animation(fadein 2.5s ease)
+		background url(../images/social-icon-github.png) no-repeat center;
+	
+	.twitter
+		animation(fadein 3s ease)
+		background url(../images/social-icon-twitter.png) no-repeat center;
+
+	.facebook
+		animation(fadein 3.5s ease)
+		background url(../images/social-icon-facebook.png) no-repeat center;
+
+
+
 	a 
 		width dimensionIcons
 		height dimensionIcons
+		background #111
+		float left
+		
+
+
+// Media Queries
+@media screen and (max-width: 799px)
+	header
+		width 90%
+		margin-left -45%
+		margin-top 0px
+		top 5%
+
+@media screen and (max-width: 480px)
+	html, body
+		height none
+
+	body
+		background-image none
+		background-color #b22222
+
+	#geral
+		width 100%
+		position absolute
+		z-index 1
+		opacity .9
+		display table
+		background none !important
+
+	.perfil .pic-name img
+		margin: 0 0 0 -10px
+
+
+
+
+// tem que ver esses keyframes
+// animations
+@-webkit-keyframes rotateIn
+  0%
+    -webkit-transform-origin: center;
+            transform-origin: center;
+    -webkit-transform: rotate3d(0, 0, 1, -90deg);
+            transform: rotate3d(0, 0, 1, -90deg);
+    opacity: 0;
+  
+
+  100%
+    -webkit-transform-origin: center;
+            transform-origin: center;
+    -webkit-transform: none;
+            transform: none;
+    opacity: 1;
+  
+
+
+@keyframes rotateIn
+  0%
+    -webkit-transform-origin: center;
+            transform-origin: center;
+    -webkit-transform: rotate3d(0, 0, 1, -90deg);
+            transform: rotate3d(0, 0, 1, -90deg);
+    opacity: 0;
+  
+
+  100%
+    -webkit-transform-origin: center;
+            transform-origin: center;
+    -webkit-transform: none;
+            transform: none;
+    opacity: 1;
+  
+
+
+
+
+/*fadeInUp*/
+@-webkit-keyframes fadeInUp
+	0%
+		opacity: 0;
+		-webkit-transform: translate3d(0, 100%, 0);
+		transform: translate3d(0, 100%, 0);
+  
+
+  100%
+		opacity: 1;
+		-webkit-transform: none;
+		transform: none;
+  
+
+
+@keyframes fadeInUp
+	0%
+		opacity: 0;
+		-webkit-transform: translate3d(0, 100%, 0);
+		transform: translate3d(0, 100%, 0);
+  
+
+  100%
+		opacity: 1;
+		-webkit-transform: none;
+		transform: none;
+  
+
+
+
+/*fadeInUpTwo*/
+@-webkit-keyframes fadeInUpTwo
+	0%
+		opacity: 0;
+		-webkit-transform: translate3d(0, 0%, 0);
+		transform: translate3d(0, 0%, 0);
+  
+
+  50%
+		opacity: 0;
+		-webkit-transform: translate3d(0, 100%, 0);
+		transform: translate3d(0, 100%, 0);
+  
+
+  100%
+		opacity: 1;
+		-webkit-transform: none;
+		transform: none;
+  
+
+
+@keyframes fadeInUpTwo
+	0%
+		opacity: 0;
+		-webkit-transform: translate3d(0, 0%, 0);
+		transform: translate3d(0, 0%, 0);
+  
+
+  50%
+		opacity: 0;
+		-webkit-transform: translate3d(0, 100%, 0);
+		transform: translate3d(0, 100%, 0);
+  
+
+  100%
+		opacity: 1;
+		-webkit-transform: none;
+		transform: none;
+  
+
+
+
+
+/*fadeInDown*/
+@-webkit-keyframes fadeInDown
+	0%
+		opacity: 0;
+		-webkit-transform: translate3d(0, 0%, 0);
+		transform: translate3d(0, 0%, 0);
+  
+
+
+  50%
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+            transform: translate3d(0, -100%, 0);
+  
+
+  100%
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  
+
+
+@keyframes fadeInDown
+	0%
+    opacity: 0;
+    -webkit-transform: translate3d(0, 0%, 0);
+            transform: translate3d(0, 0%, 0);
+  
+
+
+  50%
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+            transform: translate3d(0, -100%, 0);
+  
+
+  100%
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  
+
+
+
+/*fadeIn*/
+@-webkit-keyframes fadeIn
+  0%
+  	opacity: 0;
+  80%
+  	opacity: 0;
+  100%
+  	opacity: 1;
+
+
+@keyframes fadeIn
+  0%
+  	opacity: 0;
+  80%
+  	opacity: 0;
+  100%
+  	opacity: 1;

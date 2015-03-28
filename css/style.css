@@ -5,6 +5,7 @@
   outline-width: medium;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
 }
@@ -83,6 +84,12 @@ body {
   font-family: 'Oxigen Mono', sans-serif;
   background: #000;
   color: #fff;
+  font-size: 100.1%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 ol,
 ul {
@@ -131,19 +138,40 @@ header {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
+  -o-border-radius: 50%;
   border-radius: 50%;
+  -webkit-animation: rotateIn 1s ease;
+  -moz-animation: rotateIn 1s ease;
+  -ms-animation: rotateIn 1s ease;
+  -o-animation: rotateIn 1s ease;
+  animation: rotateIn 1s ease;
 }
 .pic-name .title {
   font-size: 50px;
   margin: 10px 0 15px 0;
+  -webkit-animation: fadeInUp 1.5s ease;
+  -moz-animation: fadeInUp 1.5s ease;
+  -ms-animation: fadeInUp 1.5s ease;
+  -o-animation: fadeInUp 1.5s ease;
+  animation: fadeInUp 1.5s ease;
 }
 .pic-name .user-name {
   font-size: 15px;
+  -webkit-animation: fadeInDown 1.5s ease;
+  -moz-animation: fadeInDown 1.5s ease;
+  -ms-animation: fadeInDown 1.5s ease;
+  -o-animation: fadeInDown 1.5s ease;
+  animation: fadeInDown 1.5s ease;
 }
 .pic-name p {
   font-size: 13px;
   line-height: 18px;
   margin-top: 30px;
+  -webkit-animation: fadeInUpTwo 2s ease;
+  -moz-animation: fadeInUpTwo 2s ease;
+  -ms-animation: fadeInUpTwo 2s ease;
+  -o-animation: fadeInUpTwo 2s ease;
+  animation: fadeInUpTwo 2s ease;
 }
 .pic-name a {
   border-bottom: 1px solid #fff;
@@ -159,7 +187,10 @@ header {
   display: table;
 }
 .social li {
+  width: 32px;
   height: 32px;
+  display: inline;
+  float: left;
 }
 .social li:hover {
   opacity: 0.4;
@@ -167,7 +198,62 @@ header {
 .social li:last-child {
   margin-right: 0;
 }
+.social .github {
+  -webkit-animation: fadein 2.5s ease;
+  -moz-animation: fadein 2.5s ease;
+  -ms-animation: fadein 2.5s ease;
+  -o-animation: fadein 2.5s ease;
+  animation: fadein 2.5s ease;
+  background: url("../images/social-icon-github.png") no-repeat center;
+}
+.social .twitter {
+  -webkit-animation: fadein 3s ease;
+  -moz-animation: fadein 3s ease;
+  -ms-animation: fadein 3s ease;
+  -o-animation: fadein 3s ease;
+  animation: fadein 3s ease;
+  background: url("../images/social-icon-twitter.png") no-repeat center;
+}
+.social .facebook {
+  -webkit-animation: fadein 3.5s ease;
+  -moz-animation: fadein 3.5s ease;
+  -ms-animation: fadein 3.5s ease;
+  -o-animation: fadein 3.5s ease;
+  animation: fadein 3.5s ease;
+  background: url("../images/social-icon-facebook.png") no-repeat center;
+}
 .social a {
   width: 32px;
   height: 32px;
+  background: #111;
+  float: left;
+}
+@media screen and (max-width: 799px) {
+  header {
+    width: 90%;
+    margin-left: -45%;
+    margin-top: 0px;
+    top: 5%;
+  }
+}
+@media screen and (max-width: 480px) {
+  html,
+  body {
+    height: none;
+  }
+  body {
+    background-image: none;
+    background-color: #b22222;
+  }
+  #geral {
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    opacity: 0.9;
+    display: table;
+    background: none !important;
+  }
+  .perfil .pic-name img {
+    margin: 0 0 0 -10px;
+  }
 }
