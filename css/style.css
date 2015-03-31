@@ -99,7 +99,6 @@ body {
   font-style: normal;
   color: #fff;
   font-size: 100.1%;
-  background: #000;
 }
 ol,
 ul {
@@ -234,9 +233,8 @@ header {
   background: url("../images/social-icon-facebook.png") no-repeat center;
 }
 .social a {
-  width: dimensionIcons;
-  height: dimensionIcons;
-  background: #111;
+  width: 32px;
+  height: 32px;
   float: left;
 }
 @media screen and (max-width: 799px) {
