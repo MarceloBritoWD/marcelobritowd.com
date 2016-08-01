@@ -1,0 +1,133 @@
+html, body
+  height 100%
+
+.sidebar
+  width 25%
+  height 100%
+  background #222 url(/resources/img/background.jpg) no-repeat center
+  background-size(cover)
+  display table
+  position fixed
+  left 0
+  top 0
+
+.author
+  width 80%
+  height auto
+  display table
+  margin 50px auto 0 auto
+
+.img-author
+  width 110px
+  height 110px
+  border-radius(50%)
+  border 4px solid rgba(#fff, .9)
+  display: table;
+  float left
+  margin-right 10px
+
+.author-name
+  font-size 32px
+  line-height 100%
+  color #9B9B9B
+  font-weight bold
+  margin 25px 0 0 0
+
+.author-info
+  font-size 20px
+  color #9B9B9B
+  font-weight 400
+  font-style italic
+
+.social
+  width auto
+  display table
+  margin 0 auto
+  position: absolute;
+  bottom: 50px
+  left 50%
+  transform(translateX(-50%))
+
+  li
+    display inline
+    float left
+    margin-right 5px
+    &:last-child
+      margin-right 0
+
+    a
+      font-size 20px
+      color #4C4C4C
+      text-shadow: 0px 1px 0px #fff
+
+
+main
+  width 75%
+  height 100%
+  display table
+  float left
+  background #fff
+  position absolute
+  top 0
+  right 0
+
+.nav
+  position fixed
+  top 5px
+  right 8px
+
+  ul
+    width auto
+
+    li
+      display inline
+      float left
+      margin-right 10px
+      &:last-child
+        margin-right 0
+
+      a
+        font-size 15px
+        color #727272
+        text-transform uppercase
+        &:hover
+          color @color - 40%
+
+
+
+.content
+  width 60%
+  padding 80px 90px
+  display table
+
+.item-post
+  width 100%
+  height auto
+  display table
+  float left
+  margin-bottom 40px
+  @extend .temTransicaoSimples
+  &:hover
+    opacity .7
+
+  a
+    width 100%
+    height @width
+    float left
+
+.post-title
+  font-size 35px
+  line-height 100%
+  color #343434
+  font-weight 700
+
+.post-date
+  font-size 18px
+  color #747474
+  text-transform uppercase
+  margin-bottom 5px
+
+.post-preview
+  font-size 16px
+  line-height 110%
+  color #666

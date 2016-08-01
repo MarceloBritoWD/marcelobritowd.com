@@ -2,22 +2,21 @@
 layout: default
 ---
 
-<div class="home">
+{% if site.posts.size > 0 %}
+  {% for post in site.posts %}
+    <div class="item-post">
+      <a href="{{post.url | prepend: site.baseurl}}">
+        <h2 class="post-title">{{post.title}}</h2>
+        <div class="post-date">
+          <time>{{post.date | date_to_string}}</time>
+        </div>
 
-  <h1 class="page-heading">Posts</h1>
+        <!-- <small class="post-preview">{{post.content}}</small> -->
+        <small class="post-preview">Texto descritivo do post aqui</small>
+      </a>
+    </div><!-- /item-post -->
+  {% endfor %}
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
-</div>
+{% else %}
+  <p>Nada encontrado! :(</p>
+{% endif %}
