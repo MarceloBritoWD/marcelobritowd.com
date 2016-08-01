@@ -21,11 +21,11 @@ module.exports = function (grunt) {
 		// configurar daqui pra baixo
 		stylus: {
 			options: {
-				compress: false
+				compress: true
 			},
 		  compile: {
 		    files: {
-		      'css/style.css': ['src/styl/main.styl'] // compile and concat into single file
+		      'resources/css/style.min.css': ['src/styl/main.styl'] // compile and concat into single file
 		    },
 		  },
 		},
@@ -33,7 +33,7 @@ module.exports = function (grunt) {
 		uglify: {
 	    my_target: {
 	      files: {
-	        'js/functions.min.js': ['src/js/functions.js', 'src/js/analytics.js']
+	        'resources/js/functions.min.js': ['src/js/functions.js', 'src/js/analytics.js']
 	      }
 	    }
 	  }
