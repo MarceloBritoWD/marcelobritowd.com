@@ -11,8 +11,8 @@ layout: default
           <time>{{post.date | date_to_string}}</time>
         </div>
 
-        <!-- <small class="post-preview">{{post.content}}</small> -->
-        <small class="post-preview">Texto descritivo do post aqui</small>
+        <small class="post-preview">{{post.content | truncate: 240 }}</small>
+        <!-- <small class="post-preview">Texto descritivo do post aqui</small> -->
       </a>
     </div><!-- /item-post -->
   {% endfor %}
