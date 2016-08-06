@@ -25,7 +25,7 @@ module.exports = function (grunt) {
 			},
 		  compile: {
 		    files: {
-		      'resources/css/style.min.css': ['src/styl/main.styl'] // compile and concat into single file
+		      'assets/css/style.min.css': ['src/styl/main.styl'] // compile and concat into single file
 		    },
 		  },
 		},
@@ -33,7 +33,7 @@ module.exports = function (grunt) {
 		uglify: {
 	    my_target: {
 	      files: {
-	        'resources/js/functions.min.js': ['src/js/functions.js', 'src/js/analytics.js']
+	        'assets/js/functions.min.js': ['src/js/functions.js', 'src/js/analytics.js']
 	      }
 	    }
 	  }
