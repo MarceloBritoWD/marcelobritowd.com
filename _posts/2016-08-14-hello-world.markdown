@@ -10,7 +10,8 @@ Ah!! Este blog foi desenvolvido com [Jekyll][jekyll] e está [disponível no Git
 
 Bem Vindo!
 
-Obs.: Blog ainda com muitos ajustes a serem feitos, responsividade, ajustes em páginas, etc.
+
+Obs.: Ainda com muitos ajustes a serem feitos, responsividade, ajustes em páginas, etc.
 
 
 
