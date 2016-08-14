@@ -33,7 +33,7 @@ module.exports = function (grunt) {
 		uglify: {
 	    my_target: {
 	      files: {
-	        'assets/js/functions.min.js': ['src/js/functions.js', 'src/js/analytics.js']
+	        'assets/js/functions.min.js': ['src/js/analytics.js']
 	      }
 	    }
 	  }
