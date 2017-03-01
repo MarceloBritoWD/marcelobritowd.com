@@ -131,6 +131,7 @@ No stylus podemos herdar as propriedades definidas em uma classe escrita anterio
 ### Continue descobrindo:
 Citei apenas coisas básicas do stylus aqui, se você quiser se aprofundar mais na linguagem, recomendo que leia a [documentação][stylus] dela.
 
+Deixe um comentário dizendo o que achou do post, críticas construtivas são bem vindas! :)
 
 [stylus]: http://stylus-lang.com/
 [nodeJS]: https://nodejs.org/en/
